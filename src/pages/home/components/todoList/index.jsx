@@ -6,12 +6,15 @@ export default function TodoList() {
     const todoContext = useContext(TodoContext);
     return (<div>
         {todoContext.todos.map((todo) => (
+           console.log(todoContext),
             <Todo
                 key={todo.id}
                 id={todo.id}
                 description={todo.description}
                 done={todo.done}
             ></Todo>
+
         ))}
     </div >)
+
 }
